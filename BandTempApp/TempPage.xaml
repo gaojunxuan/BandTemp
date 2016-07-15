@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="BandTempApp.TempPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandTempApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <DrillInNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid Background="#FF0078D7">
+        <TextBlock Text="" FontSize="300" FontFamily="Assets/IOTMDL2.1.49.ttf#IOT MDL2 Assets" Foreground="#4CFFFFFF" Margin="-135,0,0,0" VerticalAlignment="Bottom"></TextBlock>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Your Skin Temperature" Style="{StaticResource TitleTextBlockStyle}" FontSize="24" Foreground="White" HorizontalAlignment="Center" TextAlignment="Center"></TextBlock>
+            <StackPanel x:Name="value_panel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,40,0,0" Tapped="value_panel_Tapped">
+                <TextBlock Name="value" Text="N/A" FontSize="72" Foreground="White" Style="{StaticResource TitleTextBlockStyle}"></TextBlock>
+                <TextBlock Name="unit" Text="°C" FontSize="72" Foreground="White" Style="{StaticResource TitleTextBlockStyle}"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
